@@ -1,0 +1,93 @@
+body {
+    background: repeating-linear-gradient(45deg, #87CEEB, #87CEEB 10px, #4682B4 10px, #4682B4 20px);
+    font-family: 'Impact', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4682B4;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid #1E90FF;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid #1E90FF;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF4500;
+}
+
+main {
+    padding: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #1E90FF;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 2em;
+    border: 2px solid #1E90FF;
+    margin-bottom: 2em;
+}
+
+h1, h2 {
+    border-bottom: 2px solid #1E90FF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+    padding: 1em;
+    background-color: #F0F8FF;
+    border: 2px solid #1E90FF;
+    height: 100%;
+}
+
+.sidebar img {
+    width: 100%;
+    border: 2px solid #1E90FF;
+    margin-bottom: 1em;
+}
+
+.content {
+    margin-left: 220px;
+}
+
+marquee {
+    background-color: #4682B4;
+    padding: 0.5em;
+    border: 2px solid #1E90FF;
+}
+.h1title {
+    color: #ffffff;
+    border-bottom: 2px solid #1E90FF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-9/nat899.ani), url(https://cur.cursors-4u.net/nature/nat-9/nat899.png), auto !important;} /* End https://www.cursors-4u.com */
