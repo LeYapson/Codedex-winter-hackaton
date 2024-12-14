@@ -1,4 +1,3 @@
-// script.js
 
 // --- Effets sonores ---
 const splashSound = new Audio('../sound/splash.mp3'); // Effet sonore pour le poisson

@@ -75,5 +75,28 @@
     <img src="../img/fishgreen.png" alt="Poisson 1" class="floating-fish floating-fish-1">
     <img src="../img/fish3d.webp" alt="Poisson 2" class="floating-fish floating-fish-2">
     <img src="../img/fishred.webp" alt="Poisson 3" class="floating-fish floating-fish-3">
+    <audio id="background-music" loop>
+        <source src="../sound/music.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l'élément audio.
+    </audio>
+
+    <button class="music-button" onclick="toggleMusic()">Couper la musique</button>
+
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play();
+                document.querySelector('.music-button').textContent = 'Couper la musique';
+            } else {
+                audio.pause();
+                document.querySelector('.music-button').textContent = 'Jouer la musique';
+            }
+        }
+
+        window.addEventListener('load', function() {
+            document.getElementById('background-music').play();
+        });
+    </script>
 </body>
 </html>

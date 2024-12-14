@@ -182,3 +182,20 @@ marquee {
     left: 200px;
     transform: rotate(10deg); /* Pour ajouter un effet de rotation */
 }
+
+.music-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Pour s'assurer que le bouton est au-dessus du contenu */
+}
+
+.music-button:hover {
+    background-color: #FF6347;
+}
