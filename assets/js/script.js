@@ -1,7 +1,7 @@
 
 // --- Effets sonores ---
-const splashSound = new Audio('../sound/splash.mp3'); // Effet sonore pour le poisson
-const reelSound = new Audio('../sound/reel.mp3'); // Effet sonore pour ramener la ligne
+const splashSound = new Audio('./assets/sound/splash.mp3'); // Effet sonore pour le poisson
+const reelSound = new Audio('./assets/sound/reel.mp3'); // Effet sonore pour ramener la ligne
 
 // --- Initialisation ---
 const fishingRod = document.getElementById('fishing-rod');
