@@ -6,46 +6,14 @@
     <title>Techniques de Pêche</title>
     <link rel="icon" type="image/x-icon" href="../img/pixel-art-fishing-paddle-boat.jpeg">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/fishing.css">
     <link href="https://fonts.googleapis.com/css2?family=Impact&display=swap" rel="stylesheet">
-    <style>
-        .game-container {
-            margin-top: 20px;
-            border: 2px solid #1E90FF;
-            padding: 10px;
-            background-color: #F0F8FF;
-        }
-        .game-instructions {
-            margin-bottom: 10px;
-        }
-        .game-area {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            border: 2px solid #1E90FF;
-            background-color: #87CEEB;
-            overflow: hidden;
-        }
-        .lure, .bait {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-        }
-        .fish {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: blue;
-            bottom: 0;
-            transition: bottom 1s;
-        }
-    </style>
 </head>
 <body>
     <header>
         <marquee behavior="alternate" direction="right">
             <img src="../img/giphy.webp" alt="Fish GIF" width="50" height="50">
-            <h1 style="font-family: 'Impact', sans-serif; color: #FFD700;">Techniques de Pêche</h1>
+            <img src="../img/technic/techniques de peche.gif" alt="techniques de peche">
             <img src="../img/giphy.webp" alt="Fish GIF" width="50" height="50">
         </marquee>
     </header>
@@ -65,27 +33,17 @@
         <div class="container">
             <h2 style="color: #FF4500;">Techniques de Pêche</h2>
             <p>Apprenez les différentes techniques de pêche, des plus basiques aux plus avancées, pour attraper toutes sortes de poissons.</p>
-
+            <h3 style="color: #FF4500">La Pêche à la Ligne</h3>
             <div class="game-container">
-                <h3>Pêche au Popper</h3>
-                <div class="game-instructions">
-                    <p>Cliquez pour lancer le leurre et le ramener à une certaine allure.</p>
-                </div>
-                <div class="game-area" id="popper-game">
-                    <div class="lure" id="popper-lure"></div>
-                </div>
+                <div id="fishing-rod" class="rod"></div>
+                <div id="fish" class="fish"></div>
+                <div id="message"></div>
             </div>
-
-            <div class="game-container">
-                <h3>Pêche à l'Appât</h3>
-                <div class="game-instructions">
-                    <p>Cliquez pour lancer l'appât et attendez que le poisson morde.</p>
-                </div>
-                <div class="game-area" id="bait-game">
-                    <div class="bait" id="bait"></div>
-                    <div class="fish" id="fish"></div>
-                </div>
+            <div class="controls">
+                <button id="cast-button">Lancer la ligne</button>
+                <button id="reel-button">Ramener la ligne</button>
             </div>
+            
         </div>
     </main>
     <footer>

@@ -1,43 +1,74 @@
-// Pêche au Popper
-const popperLure = document.getElementById('popper-lure');
-let popperDirection = 1;
+// script.js
 
-document.getElementById('popper-game').addEventListener('click', () => {
-    popperLure.style.left = '0px';
-    popperLure.style.transition = 'left 1s';
-    popperDirection = 1;
-    movePopper();
-});
+// --- Effets sonores ---
+const splashSound = new Audio('../sound/splash.mp3'); // Effet sonore pour le poisson
+const reelSound = new Audio('../sound/reel.mp3'); // Effet sonore pour ramener la ligne
 
-function movePopper() {
-    if (popperDirection === 1) {
-        popperLure.style.left = '280px';
-        popperDirection = -1;
-    } else {
-        popperLure.style.left = '0px';
-        popperDirection = 1;
-    }
-    setTimeout(movePopper, 1000);
-}
-
-// Pêche à l'Appât
-const bait = document.getElementById('bait');
+// --- Initialisation ---
+const fishingRod = document.getElementById('fishing-rod');
 const fish = document.getElementById('fish');
-let baitCaught = false;
+const message = document.getElementById('message');
 
-document.getElementById('bait-game').addEventListener('click', () => {
-    bait.style.left = '100px';
-    bait.style.transition = 'left 1s';
-    fish.style.bottom = '0px';
-    fish.style.transition = 'bottom 1s';
-    baitCaught = false;
-    checkBaitCaught();
-});
+let isFishing = false;
+let fishCaught = false;
 
-function checkBaitCaught() {
-    if (!baitCaught && parseInt(bait.style.left) === 100 && parseInt(fish.style.bottom) === 0) {
-        baitCaught = true;
-        fish.style.bottom = '170px';
-        fish.style.transition = 'bottom 1s';
-    }
+// --- Événements ---
+document.getElementById('cast-button').addEventListener('click', castLine);
+document.getElementById('reel-button').addEventListener('click', reelLine);
+
+// --- Fonction pour lancer la ligne ---
+function castLine() {
+    if (isFishing || fishCaught) return;
+
+    isFishing = true;
+    message.textContent = '🎣 Lancer de la ligne... Attendez que le poisson morde !';
+    fishingRod.style.height = '200px';
+    fishingRod.style.transition = 'height 1s';
+
+    setTimeout(() => {
+        if (!fishCaught) {
+            fishBites();
+        }
+    }, Math.random() * 3000 + 2000); // Délai aléatoire pour la morsure
 }
+
+// --- Fonction pour la morsure ---
+function fishBites() {
+    if (!isFishing) return;
+
+    fishCaught = true;
+    splashSound.play();
+    message.textContent = '🐟 Le poisson a mordu ! Ramenez la ligne rapidement !';
+    fish.style.bottom = '150px'; // Le poisson monte
+    fish.style.transition = 'bottom 1s';
+}
+
+// --- Fonction pour ramener la ligne ---
+function reelLine() {
+    if (!isFishing || !fishCaught) {
+        message.textContent = '❌ Rien à ramener pour l\'instant.';
+        return;
+    }
+
+    reelSound.play();
+    fishingRod.style.height = '50px'; // La canne se rétracte
+    fishingRod.style.transition = 'height 1s';
+    fish.style.bottom = '250px'; // Le poisson remonte
+    fish.style.transition = 'bottom 1s';
+
+    setTimeout(() => {
+        message.textContent = '🎉 Vous avez attrapé un poisson ! Bien joué !';
+        resetGame();
+    }, 1500);
+}
+
+// --- Réinitialisation ---
+function resetGame() {
+    isFishing = false;
+    fishCaught = false;
+    fishingRod.style.height = '50px';
+    fish.style.bottom = '0px';
+    message.textContent = '🎣 Cliquez sur "Lancer la ligne" pour commencer !';
+}
+
+

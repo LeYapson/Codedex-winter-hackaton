@@ -1,0 +1,77 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Bleu ciel */
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    background-color: #4682B4; /* Bleu acier */
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    background-color: #4682B4;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.game-container {
+    position: relative;
+    margin: 50px auto;
+    width: 150px;
+    height: 300px;
+    background-color: #1E90FF; /* Bleu océan */
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.rod {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    height: 50px;
+    background-color: #8B4513; /* Marron */
+    transform: translateX(-50%);
+}
+
+.fish {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFA07A; /* Saumon clair */
+    color: #333;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF6347; /* Tomate */
+    transform: scale(1.1);
+}
