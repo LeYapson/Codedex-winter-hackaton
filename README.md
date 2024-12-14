@@ -1,7 +1,7 @@
 # Codedex-winter-hackaton
 # Site de Pêche Années 90
 
-Bienvenue sur le projet "Site de Pêche Années 90" ! Ce site web est dédié à ma passion pour la pêche et est conçu dans le style rétro des années 90. Il a été créé dans le cadre d'un hackathon avec pour objectif de partager des informations sur l'équipement de pêche, les techniques de pêche, et mes expériences personnelles.
+Bienvenue sur le projet "Site de Pêche Années 90" ! Ce site web est dédié à ma passion pour la pêche et est conçu dans le style rétro des années 90. Il a été créé dans le cadre du Mini Holiday HACKATHON organisé par le site Codédex (https://www.codedex.io/) avec pour objectif de partager des informations sur l'équipement de pêche, les techniques de pêche, et mes expériences personnelles.
 
 ## Table des matières
 
