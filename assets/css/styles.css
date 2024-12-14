@@ -90,4 +90,74 @@ marquee {
     padding-bottom: 5px;
 }
 
-/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-9/nat899.ani), url(https://cur.cursors-4u.net/nature/nat-9/nat899.png), auto !important;} /* End https://www.cursors-4u.com */
+* {cursor: url(https://cur.cursors-4u.net/nature/nat-9/nat899.ani), url(https://cur.cursors-4u.net/nature/nat-9/nat899.png), auto !important;}
+
+.retro-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: white;
+    text-decoration: none;
+    font-family: 'Impact', sans-serif;
+    font-size: 16px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.retro-button:hover {
+    background-color: #FF6347;
+    transform: scale(1.05);
+}
+
+.retro-button .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #1E90FF;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+}
+.contact-form h2 {
+    color: #FF4500;
+    border-bottom: 2px solid #1E90FF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Impact', sans-serif;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #1E90FF;
+    border-radius: 5px;
+    font-family: 'Impact', sans-serif;
+}
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Impact', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+    background-color: #FF6347;
+}

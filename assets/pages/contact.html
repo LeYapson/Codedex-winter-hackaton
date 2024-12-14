@@ -24,14 +24,27 @@
         <a href="../pages/contact.html" style="color: #FF4500;">Contact</a>
     </nav>
     <div class="sidebar">
-        <img src="https://media.giphy.com/media/3o7TKsW7GhZa6QDQDW/giphy.gif" alt="Fish GIF" width="200" height="200">
-        <img src="https://media.giphy.com/media/3o7TKsW7GhZa6QDQDW/giphy.gif" alt="Fish GIF" width="200" height="200">
-        <img src="https://media.giphy.com/media/3o7TKsW7GhZa6QDQDW/giphy.gif" alt="Fish GIF" width="200" height="200">
+        <img src="../img/contact/giphycorner.webp" alt="Fish GIF" width="200" height="200">
+        <img src="../img/contact/giphycorner3.webp" alt="Fish GIF" width="200" height="200">
+        <img src="../img/contact/giphycorner2.webp" alt="Fish GIF" width="200" height="200">
     </div>
     <main class="content">
         <div class="container">
             <h2 style="color: #FF4500;">Contact</h2>
-            <p>Si vous avez des questions ou souhaitez partager vos propres expériences de pêche, n'hésitez pas à me contacter.</p>
+            <p>Si vous avez des questions ou souhaitez partager vos propres expériences de pêche, n'hésitez pas à me contacter en utilisant le formulaire ci-dessous.</p>
+
+            <form class="contact-form" action="MAILTO:yapsonstudio@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
         </div>
     </main>
     <footer>
