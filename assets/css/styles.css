@@ -161,3 +161,24 @@ marquee {
 .contact-form button:hover {
     background-color: #FF6347;
 }
+
+.floating-fish {
+    position: absolute;
+    z-index: -1; /* Pour s'assurer que les images sont derrière le contenu */
+}
+
+.floating-fish-1 {
+    top: 150px;
+    left: 200px;
+}
+
+.floating-fish-2 {
+    bottom: 30px;
+    right: 100px;
+}
+
+.floating-fish-3 {
+    bottom: 10px;
+    left: 200px;
+    transform: rotate(10deg); /* Pour ajouter un effet de rotation */
+}
